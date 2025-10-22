@@ -1,0 +1,2242 @@
+/* =======================================================
+   ⚔️  DIABLO II: LORD OF DESTRUCTION - MAIN STYLESHEET
+   ======================================================= */
+
+/* --- RESETEO Y CONFIGURACIÓN BASE --- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  overflow-x: hidden;
+}
+
+/* --- VIDEO DE FONDO --- */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.2);
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main.content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- HERO / SECCIÓN PRINCIPAL --- */
+.hero {
+  margin-top: 5rem;
+  animation: fadeIn 1.5s ease;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #b30000;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =======================================================
+   HEADER
+   ======================================================= */
+header {
+  background: linear-gradient(90deg, #b30000, #800000);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid #d4af37;
+}
+
+header .logo {
+  color: #d4af37;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+  color: #d4af37;
+  transform: scale(1.1);
+}
+
+#langSelect {
+  background-color: #0d0d0d;
+  color: #fff;
+  border: 1px solid #d4af37;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* =======================================================
+   FOOTER (Sticky con animaciones)
+   ======================================================= */
+footer {
+  background: linear-gradient(180deg, #1a0000, #0d0d0d);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 2px solid #d4af37;
+  margin-top: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Línea dorada animada --- */
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  animation: moveGlow 6s linear infinite;
+}
+
+@keyframes moveGlow {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* --- Logo y texto --- */
+.footer-logo h2 {
+  color: #d4af37;
+  margin-bottom: 0.3rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+  transition: text-shadow 0.4s ease;
+}
+
+.footer-logo:hover h2 {
+  text-shadow: 0 0 25px #ffcc00, 0 0 40px #ffcc00;
+}
+
+.footer-logo p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* --- Enlaces del footer --- */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.footer-links ul li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.4s ease, transform 0.3s ease;
+}
+
+.footer-links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #d4af37;
+  transform: scale(1.1);
+}
+
+.footer-links ul li a:hover::after {
+  width: 100%;
+}
+
+/* --- Iconos sociales --- */
+.footer-social a img {
+  width: 28px;
+  height: 28px;
+  margin: 0 5px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: brightness(0) invert(1);
+}
+
+.footer-social a:hover img {
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 6px #d4af37);
+}
+
+/* --- Barra inferior --- */
+.footer-bottom {
+  border-top: 1px solid #d4af37;
+  margin-top: 1.5rem;
+  padding-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+footer:hover {
+  box-shadow: 0 -5px 20px rgba(212, 175, 55, 0.4);
+  border-top: 2px solid #ffcc00;
+}
+
+/* =======================================================
+   RESPONSIVE DESIGN
+   ======================================================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .footer-links ul {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .footer-social {
+    margin-top: 1rem;
+  }
+}
+/* --- CAPAS: video al fondo, overlay encima, contenido arriba --- */
+.video-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -2;            /* antes: -1 */
+  pointer-events: none;   /* no bloquea clics */
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.2);
+}
+
+/* overlay debe estar sobre el video pero debajo del contenido */
+.video-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;            /* antes: 0 */
+  pointer-events: none;   /* no bloquea clics */
+}
+
+/* El contenido se ve por encima del overlay */
+main.content {
+  flex: 1;
+  position: relative;
+  z-index: 0;             /* antes: 1 (no hace falta, con 0 basta si overlay es -1) */
+}
+
+/* Aseguramos header y footer sobre el overlay */
+header, footer {
+  position: relative;
+  z-index: 1;
+}
+/* --- SECCIÓN ACERCA (ABOUT) --- */
+.about-section {
+  padding: 3rem 2rem;
+  background: rgba(13, 13, 13, 0.7);
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+}
+
+.about-section h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #d4af37, 0 0 20px #b30000;
+  margin-bottom: 1.5rem;
+}
+
+.about-section p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #f2f2f2;
+}
+
+.server-info {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.server-info h3 {
+  text-align: center;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.server-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.server-info li {
+  margin: 0.3rem 0;
+}
+
+.links {
+  margin-top: 2rem;
+}
+
+.links a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #ffcc00;
+}
+/* =======================================================
+   SECCIÓN DESCARGAS - ESTILO DEMONÍACO
+   ======================================================= */
+.no-video {
+  background: radial-gradient(circle at center, #1a0000, #0d0d0d 80%);
+}
+
+.downloads-section {
+  padding: 4rem 2rem;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.downloads-container {
+  max-width: 1000px;
+  background: rgba(20, 0, 0, 0.8);
+  border: 2px solid rgba(212, 175, 55, 0.6);
+  border-radius: 15px;
+  padding: 2.5rem;
+  box-shadow: 0 0 25px rgba(179, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 1.2s ease;
+}
+
+.downloads-container h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  text-shadow: 0 0 10px #d4af37, 0 0 25px #b30000;
+  margin-bottom: 1rem;
+}
+
+.downloads-container .intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #f2f2f2;
+  text-shadow: 0 0 6px #000;
+}
+
+.downloads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.downloads-table th {
+  background: linear-gradient(90deg, #800000, #b30000);
+  color: #d4af37;
+  padding: 0.8rem;
+  border-bottom: 2px solid #d4af37;
+}
+
+.downloads-table td {
+  background-color: rgba(30, 0, 0, 0.6);
+  padding: 0.8rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.downloads-table tr:hover td {
+  background-color: rgba(179, 0, 0, 0.4);
+}
+
+.downloads-table a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.downloads-table a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+@media (max-width: 768px) {
+  .downloads-table th, .downloads-table td {
+    font-size: 0.9rem;
+  }
+
+  .downloads-container {
+    padding: 1.5rem;
+  }
+}
+/* =======================================================
+   HERO / INDEX BUTTONS & ANIMATIONS
+   ======================================================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 140px);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  animation: fadeIn 1.5s ease;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: #d4af37;
+  text-shadow: 0 0 15px #d4af37, 0 0 25px #b30000;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px #000;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-hellfire {
+  display: inline-block;
+  background: linear-gradient(90deg, #800000, #b30000);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px #b30000;
+  box-shadow: 0 0 15px rgba(179, 0, 0, 0.5);
+}
+
+.btn-hellfire:hover {
+  background: linear-gradient(90deg, #b30000, #ff0000);
+  color: #ffcc00;
+  text-shadow: 0 0 15px #ffcc00;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.8);
+  transform: scale(1.08);
+}
+
+/* Animación general */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* =======================================================
+   💀 DONATIONS SECTION
+   ======================================================= */
+.donations-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: rgba(20, 0, 0, 0.85);
+  padding: 2rem;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1.2s ease;
+}
+
+.donations-section h1 {
+  color: #d4af37;
+  text-shadow: 0 0 10px #b30000, 0 0 20px #ffcc00;
+  margin-bottom: 1.5rem;
+}
+
+.donations-section .intro {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.donation-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 2rem;
+  max-width: 500px;
+}
+
+.donation-items ul li {
+  background: rgba(128, 0, 0, 0.4);
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  text-shadow: 0 0 5px #000;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.donation-items ul li:hover {
+  background: rgba(179, 0, 0, 0.7);
+  transform: scale(1.05);
+  color: #ffcc00;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.contact .btn-hellfire {
+  font-size: 1.1rem;
+}
+/* =======================================================
+   🛠️ TOOLS SECTION
+   ======================================================= */
+.tools-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: rgba(20, 0, 0, 0.85);
+  padding: 2rem;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1.2s ease;
+}
+
+.tools-section h1 {
+  color: #d4af37;
+  text-shadow: 0 0 10px #b30000, 0 0 20px #ffcc00;
+  margin-bottom: 1.5rem;
+}
+
+.tools-section .intro {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.tools-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #d4af37;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(179, 0, 0, 0.5);
+}
+
+.tools-table th, .tools-table td {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d4af37;
+  text-align: left;
+  color: #fff;
+}
+
+.tools-table th {
+  background: linear-gradient(90deg, #800000, #400000);
+  color: #ffcc00;
+  text-shadow: 0 0 5px #b30000;
+}
+
+.tools-table tr:hover {
+  background: rgba(179, 0, 0, 0.4);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.tools-table a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tools-table a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #ffcc00;
+}
+/* =======================================================
+   🏰 INDEX - HOME PAGE
+   ======================================================= */
+
+/* 🎥 Video de fondo */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+
+/* 🕸️ Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+  animation: fadeIn 1.2s ease;
+}
+
+.hero-content {
+  max-width: 800px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 2.5rem;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+}
+
+.hero-content h1 {
+  color: #d4af37;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px #b30000, 0 0 25px #ffcc00;
+  margin-bottom: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+.hero-content p {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* 🩸 Botones */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-gold {
+  background-color: #d4af37;
+  color: #1a0000;
+  border-color: #b30000;
+}
+
+.btn-gold:hover {
+  background-color: #ffcc00;
+  color: #800000;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+.btn-red {
+  background-color: #b30000;
+  color: #fff;
+  border-color: #d4af37;
+}
+
+.btn-red:hover {
+  background-color: #ff1a1a;
+  color: #fff;
+  box-shadow: 0 0 15px #ffcc00;
+}
+
+/* ✨ Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+  .hero-content {
+    max-width: 600px;
+    padding: 1.8rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 1.5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+/* =======================================================
+   🔥 FOOTER DEMONIACO - DIABLO II REVENGE
+   ======================================================= */
+footer {
+  position: relative;
+  background: radial-gradient(circle at center, #1a0000 20%, #0d0000 100%);
+  border-top: 3px solid #d4af37;
+  overflow: hidden;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  color: #fff;
+  box-shadow: 0 -10px 25px rgba(179, 0, 0, 0.7);
+  z-index: 5;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d4af37;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #b30000, 0 0 25px #ffcc00;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+}
+
+/* 🌐 Íconos sociales */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.2rem 0;
+}
+
+.footer-socials a {
+  font-size: 1.8rem;
+  color: #d4af37;
+  text-shadow: 0 0 10px #b30000, 0 0 20px #ffcc00;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  color: #ffcc00;
+  transform: scale(1.3) rotate(10deg);
+  text-shadow: 0 0 20px #ffcc00, 0 0 30px #b30000;
+}
+
+/* 💀 Texto inferior */
+.footer-text {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #f5f5f5;
+  text-shadow: 0 0 5px #000;
+}
+
+.footer-credits {
+  color: #d4af37;
+  font-weight: bold;
+  margin-top: 0.8rem;
+  font-size: 1.2rem;
+  text-shadow: 0 0 12px #b30000, 0 0 20px #ffcc00;
+}
+
+/* 🔥 Llamas animadas (efecto fuego en el borde superior) */
+.footer-flames {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to top, rgba(255, 69, 0, 0.9), transparent);
+  filter: blur(8px);
+  animation: flames 1.5s infinite alternate ease-in-out;
+  opacity: 0.7;
+}
+
+@keyframes flames {
+  0% { transform: scaleY(0.8) translateY(0); opacity: 0.6; }
+  50% { transform: scaleY(1.2) translateY(-5px); opacity: 1; }
+  100% { transform: scaleY(1) translateY(3px); opacity: 0.8; }
+}
+
+/* 🕸️ Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 2.5rem 1rem;
+  }
+  .footer-logo {
+    font-size: 1.4rem;
+  }
+  .footer-socials a {
+    font-size: 1.5rem;
+  }
+  .footer-text {
+    font-size: 0.95rem;
+  }
+  .footer-credits {
+    font-size: 1rem;
+  }
+}
+/* =======================================================
+   👹 HEADER DEMONIACO - DIABLO II REVENGE
+   ======================================================= */
+.infernal-header {
+  background: radial-gradient(circle at top, #200000 20%, #0a0000 90%);
+  border-bottom: 3px solid #d4af37;
+  box-shadow: 0 5px 25px rgba(179, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.infernal-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,0,0,0.15) 0%, transparent 70%);
+  animation: pulseGlow 6s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+@keyframes pulseGlow {
+  from { opacity: 0.5; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+/* 👹 LOGO */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d4af37;
+  text-transform: uppercase;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ffcc00;
+  z-index: 2;
+  letter-spacing: 2px;
+  font-family: 'Cinzel', serif;
+}
+
+/* ⚔️ NAV MENU */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+}
+
+.nav-menu ul li a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 6px #b30000, 0 0 12px #ffcc00;
+  letter-spacing: 1px;
+}
+
+.nav-menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-menu ul li a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ffcc00, 0 0 25px #b30000;
+}
+
+.nav-menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* 🌐 LANG SELECTOR */
+.lang-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fff;
+  font-size: 1.1rem;
+  z-index: 2;
+}
+
+#langSelect {
+  background-color: #0d0d0d;
+  color: #fff;
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  transition: all 0.3s ease;
+}
+
+#langSelect:hover {
+  background-color: #b30000;
+  color: #ffcc00;
+  box-shadow: 0 0 10px #ffcc00;
+}
+
+/* ☰ MENU ICON (mobile) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #d4af37;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* 🔥 RESPONSIVE MENU */
+@media (max-width: 900px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(10, 0, 0, 0.95);
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-top: 2px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(179, 0, 0, 0.6);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 1rem;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-menu {
+    height: 250px;
+  }
+}
+/* =======================================================
+   ⚔️ REGLAS PVP
+   ======================================================= */
+.rules-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: rgba(10, 0, 0, 0.9);
+  padding: 2.5rem;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  color: #fff;
+}
+
+.rules-section h1 {
+  text-align: center;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 2.2rem;
+  text-shadow: 0 0 10px #b30000, 0 0 25px #ffcc00;
+  margin-bottom: 1.5rem;
+}
+
+.rules-section .intro {
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.rules-block {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(20, 0, 0, 0.75);
+  border-left: 4px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(179, 0, 0, 0.5);
+}
+
+.rules-block h2 {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  font-family: 'Cinzel', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.rules-block p {
+  white-space: pre-line;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .rules-section {
+    padding: 1.5rem;
+  }
+  .rules-section h1 {
+    font-size: 1.8rem;
+  }
+  .rules-block h2 {
+    font-size: 1.2rem;
+  }
+}
+/* =======================================================
+   🩸 CLASES PVP - CONTENEDORES INFERNALES
+   ======================================================= */
+.class-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.class-card {
+  background: linear-gradient(180deg, rgba(30, 0, 0, 0.95), rgba(0, 0, 0, 0.8));
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+  padding: 1.5rem;
+  color: #fff;
+  font-family: 'Cinzel', serif;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.class-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.class-card:hover::before {
+  opacity: 1;
+}
+
+.class-card h3 {
+  color: #ffcc00;
+  text-align: center;
+  font-size: 1.3rem;
+  text-shadow: 0 0 10px #b30000, 0 0 20px #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.class-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.class-card ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.class-card ul li::before {
+  content: "🔥";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.9rem;
+}
+
+/* 👹 Hover brillante */
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.8), 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+/* 🎨 Clases temáticas */
+.sorceress { border-color: #7a00ff; }
+.paladin { border-color: #ffd700; }
+.barbarian { border-color: #ff4500; }
+.necromancer { border-color: #8a2be2; }
+.assassin { border-color: #ff0055; }
+.druid { border-color: #00ff88; }
+.amazon { border-color: #ffcc00; }
+
+@media (max-width: 768px) {
+  .class-card h3 {
+    font-size: 1.1rem;
+  }
+}
+/* =======================================================
+   💀 REGLAS DEL SERVIDOR
+   ======================================================= */
+.server-rules-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  background: radial-gradient(circle at top, #1a0000 20%, #000000 80%);
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  padding: 2.5rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.server-rules-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../img/hell-smoke.gif') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.server-rules-section h1 {
+  color: #d4af37;
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ffcc00;
+  margin-bottom: 1.5rem;
+  font-size: 2.3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.server-rules-section .intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  margin-bottom: 2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.rules-list {
+  background: rgba(25, 0, 0, 0.8);
+  border-left: 5px solid #d4af37;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: pre-line;
+  z-index: 2;
+  position: relative;
+}
+
+.rules-list p {
+  margin-bottom: 1rem;
+}
+
+.rules-list::before {
+  content: "🔥";
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0.2;
+  font-size: 3rem;
+}
+
+.footer-note {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-shadow: 0 0 8px #b30000;
+}
+
+@media (max-width: 768px) {
+  .server-rules-section {
+    padding: 1.5rem;
+  }
+  .server-rules-section h1 {
+    font-size: 1.8rem;
+  }
+}
+/* =======================================================
+   🔥 TABLA DE SANCIONES INFERNALES
+   ======================================================= */
+.sanctions-title {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #b30000, 0 0 25px #ffcc00;
+  font-size: 1.8rem;
+}
+
+.sanctions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(10, 0, 0, 0.85);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+  animation: glowPulse 4s infinite ease-in-out alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 20px rgba(179, 0, 0, 0.5); }
+  to { box-shadow: 0 0 35px rgba(255, 215, 0, 0.7); }
+}
+
+.sanctions-table th,
+.sanctions-table td {
+  padding: 1rem;
+  text-align: left;
+  color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.sanctions-table th {
+  background: linear-gradient(90deg, #400000, #220000);
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  font-size: 1.1rem;
+}
+
+.sanctions-table tbody tr:nth-child(even) {
+  background: rgba(50, 0, 0, 0.6);
+}
+
+.sanctions-table tbody tr:hover {
+  background: rgba(255, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.sanctions-table td:first-child {
+  font-weight: bold;
+  color: #ff9999;
+}
+
+.sanctions-table td:last-child {
+  color: #ffcc00;
+  text-shadow: 0 0 8px #b30000;
+}
+
+@media (max-width: 768px) {
+  .sanctions-table th,
+  .sanctions-table td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+/* ==============================================
+   🔥 INDEX LAYOUT — TEXT LEFT + VIDEO RIGHT
+   ============================================== */
+.main-index {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 150px);
+  background: radial-gradient(circle at center, #1a0000 0%, #000 80%);
+  color: #fff;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Texto (lado izquierdo) */
+.index-left {
+  flex: 1;
+  padding: 2rem;
+  text-align: left;
+  animation: fadeInLeft 2s ease-in-out;
+}
+
+.index-left h1 {
+  font-family: 'Cinzel', serif;
+  color: #ffcc00;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ffcc00;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.index-left p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+  text-shadow: 0 0 10px #000;
+  max-width: 550px;
+}
+
+/* Video (lado derecho) */
+.index-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 2s ease-in-out;
+}
+
+.video-frame {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.7), inset 0 0 10px #ffcc00;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Animaciones */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Modo responsive (para celulares) */
+@media (max-width: 900px) {
+  .main-index {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .index-left, .index-right {
+    flex: none;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .index-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .index-left p {
+    font-size: 1rem;
+    max-width: none;
+  }
+
+  .video-frame {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+/* ===========================================
+   🔥 HOME LAYOUT — TEXT LEFT + VIDEO RIGHT
+   =========================================== */
+.home-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6%;
+  background: radial-gradient(circle at center, #150000 0%, #000 90%);
+  min-height: calc(100vh - 150px);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* 🩸 Texto de bienvenida */
+.home-text {
+  flex: 1;
+  padding-right: 2rem;
+  animation: fadeInLeft 1.8s ease-in-out;
+}
+
+.home-text h1 {
+  font-family: 'Cinzel', serif;
+  color: #ffcc00;
+  text-shadow: 0 0 15px #b30000, 0 0 35px #ffcc00;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.8;
+  max-width: 600px;
+  text-shadow: 0 0 8px #000;
+}
+
+/* 🔥 Video de YouTube */
+.home-video {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInRight 1.8s ease-in-out;
+}
+
+.home-video iframe {
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16/9;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6), inset 0 0 10px #ffcc00;
+  transition: all 0.3s ease;
+}
+
+.home-video iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.8), inset 0 0 20px #ffd700;
+}
+
+/* ⚡ Animaciones */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* 📱 Responsive (móviles) */
+@media (max-width: 900px) {
+  .home-layout {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .home-text {
+    padding: 0;
+  }
+
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .home-video {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .home-video iframe {
+    max-width: 100%;
+  }
+}
+/* ======================================
+   🔥 YouTube Video dentro del Hero
+   ====================================== */
+.youtube-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 560px;
+  width: 100%;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7), inset 0 0 10px #ffcc00;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+}
+
+.youtube-container iframe {
+  width: 100%;
+  height: 315px;
+  border-radius: 8px;
+}
+
+/* 📱 Responsive para móviles */
+@media (max-width: 768px) {
+  .youtube-container {
+    max-width: 100%;
+    margin: 1.5rem 0;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+
+  .youtube-container iframe {
+    height: 220px;
+  }
+}
+/* ================================================
+   💀 SERVER RULES PAGE
+   ================================================ */
+.server-rules {
+  min-height: calc(100vh - 150px);
+  background: radial-gradient(circle at center, #1a0000 0%, #000 80%);
+  color: #fff;
+  padding: 2rem 6%;
+}
+
+.rules-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.5);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.rules-title {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.rules-intro {
+  text-align: justify;
+  line-height: 1.8;
+  color: #e5e5e5;
+  margin-bottom: 1rem;
+}
+
+.rules-text p {
+  text-align: justify;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.footer-note {
+  text-align: center;
+  color: #ffcc00;
+  font-weight: bold;
+  margin: 2rem 0;
+  text-shadow: 0 0 10px #b30000;
+}
+
+/* 💥 Tabla de sanciones infernal */
+.sanctions-title {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px #b30000, 0 0 25px #ffcc00;
+  font-size: 1.8rem;
+}
+
+.sanctions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(10, 0, 0, 0.85);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+  animation: glowPulse 4s infinite ease-in-out alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 20px rgba(179, 0, 0, 0.5); }
+  to { box-shadow: 0 0 35px rgba(255, 215, 0, 0.7); }
+}
+
+.sanctions-table th,
+.sanctions-table td {
+  padding: 1rem;
+  text-align: left;
+  color: #fff;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.sanctions-table th {
+  background: linear-gradient(90deg, #400000, #220000);
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  font-size: 1.1rem;
+}
+
+.sanctions-table tbody tr:nth-child(even) {
+  background: rgba(50, 0, 0, 0.6);
+}
+
+.sanctions-table tbody tr:hover {
+  background: rgba(255, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.sanctions-table td:first-child {
+  font-weight: bold;
+  color: #ff9999;
+}
+
+.sanctions-table td:last-child {
+  color: #ffcc00;
+  text-shadow: 0 0 8px #b30000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .rules-container {
+    padding: 1.5rem;
+  }
+
+  .sanctions-table th,
+  .sanctions-table td {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+}
+/* ================================================
+   😈 SERVER RULES – ESTILO INFERNAL REFORZADO
+   ================================================ */
+
+.server-rules {
+  position: relative;
+  min-height: calc(100vh - 150px);
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, #0a0000 0%, #000 100%);
+  padding: 3rem 6%;
+}
+
+/* 🔥 Neblina demoníaca animada */
+.infernal-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,0,0,0.15), transparent 50%),
+              radial-gradient(circle at 70% 80%, rgba(255,170,0,0.1), transparent 60%);
+  animation: infernoPulse 6s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes infernoPulse {
+  0% { filter: blur(20px) brightness(0.8); opacity: 0.6; }
+  100% { filter: blur(40px) brightness(1.2); opacity: 1; }
+}
+
+.rules-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #d4af37;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.5), inset 0 0 30px rgba(255, 200, 0, 0.2);
+  padding: 2.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: fadeInUp 1.8s ease-in-out;
+}
+
+/* 👁️‍🗨️ TÍTULO */
+.rules-title {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  font-size: 2.4rem;
+  text-shadow: 0 0 20px #b30000, 0 0 45px #ffcc00;
+  margin-bottom: 2rem;
+  animation: flicker 3s infinite;
+}
+
+/* ✍️ Texto principal */
+.rules-intro,
+.rules-text p {
+  text-align: justify;
+  color: #e3e3e3;
+  font-family: 'Merriweather', serif;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  text-shadow: 0 0 8px #000;
+}
+
+/* ⚠️ Footer note */
+.footer-note {
+  text-align: center;
+  color: #ffcc00;
+  margin: 2.5rem 0 1.5rem 0;
+  text-shadow: 0 0 10px #b30000;
+  font-weight: bold;
+}
+
+/* 💀 Tabla infernal */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.sanctions-title {
+  text-align: center;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #b30000, 0 0 40px #ffcc00;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-family: 'Cinzel', serif;
+}
+
+.sanctions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(180deg, rgba(50,0,0,0.8), rgba(20,0,0,0.9));
+  border: 2px solid #d4af37;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+  animation: glowPulse 4s infinite alternate ease-in-out;
+  border-radius: 8px;
+}
+
+.sanctions-table th {
+  background: linear-gradient(90deg, #330000, #111);
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #d4af37;
+}
+
+.sanctions-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sanctions-table tr:nth-child(even) {
+  background: rgba(80, 0, 0, 0.4);
+}
+
+.sanctions-table tbody tr:hover {
+  background: rgba(255, 0, 0, 0.25);
+  transition: 0.3s;
+  box-shadow: inset 0 0 10px #ff0000;
+}
+
+.sanctions-table td:first-child {
+  font-weight: bold;
+  color: #ff9999;
+  text-shadow: 0 0 6px #b30000;
+}
+
+.sanctions-table td:last-child {
+  color: #ffd700;
+  text-shadow: 0 0 10px #ff0000;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 20px #b30000, 0 0 45px #ffcc00;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); }
+  to { box-shadow: 0 0 45px rgba(255, 215, 0, 0.7); }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .rules-container {
+    padding: 1.5rem;
+  }
+  .rules-title {
+    font-size: 1.8rem;
+  }
+  .sanctions-table th, .sanctions-table td {
+    font-size: 0.9rem;
+  }
+}
+/* =======================================================
+   🔥 SERVER RULES RE-DESIGNED
+   ======================================================= */
+
+.server-rules {
+  background: radial-gradient(circle at center, #140000 0%, #000 90%);
+  color: #f5f5f5;
+  padding: 3rem 5%;
+  overflow-x: hidden;
+}
+
+/* 🩸 HEADER SECTION */
+.rules-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rules-header h1 {
+  font-family: 'Cinzel', serif;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #ff0000, 0 0 50px #ffcc00;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.rules-header p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* 🔥 FIRE SEPARATOR */
+.fire-separator {
+  height: 4px;
+  background: linear-gradient(90deg, #ff0000, #ffcc00, #ff0000);
+  box-shadow: 0 0 20px #ff0000;
+  margin: 2rem auto;
+  width: 90%;
+  border-radius: 2px;
+  animation: fireFlow 3s infinite linear;
+}
+
+@keyframes fireFlow {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* 👹 RULES BODY */
+.rules-body {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #a00000;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.rules-body h2 {
+  text-align: center;
+  color: #ffcc00;
+  font-family: 'Cinzel', serif;
+  text-shadow: 0 0 10px #b30000;
+  margin-bottom: 1.5rem;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.2rem;
+}
+
+.rule-card {
+  background: rgba(30, 0, 0, 0.85);
+  border: 1px solid #ff0000;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: #fff;
+  line-height: 1.6;
+  box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rule-card span {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.rule-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 50, 0, 0.5);
+}
+
+.rules-warning {
+  text-align: center;
+  margin-top: 2rem;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  font-weight: bold;
+}
+
+/* 💀 SANCTIONS TABLE */
+.sanctions-section {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.sanctions-section h2 {
+  color: #ffcc00;
+  text-shadow: 0 0 15px #b30000, 0 0 30px #ffcc00;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 1.5rem;
+}
+
+.sanctions-table-wrapper {
+  overflow-x: auto;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.sanctions-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(25, 0, 0, 0.8);
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+.sanctions-table th {
+  background: linear-gradient(90deg, #3a0000, #1a0000);
+  color: #ffcc00;
+  text-shadow: 0 0 10px #b30000;
+  padding: 1rem;
+  border-bottom: 2px solid #d4af37;
+}
+
+.sanctions-table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  text-align: left;
+  color: #ddd;
+}
+
+.sanctions-table tr:nth-child(even) {
+  background: rgba(60, 0, 0, 0.6);
+}
+
+.sanctions-table tr:hover {
+  background: rgba(255, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.sanctions-table td:first-child {
+  color: #ff9999;
+  font-weight: bold;
+}
+
+.sanctions-table td:last-child {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+  .rules-header h1 {
+    font-size: 2rem;
+  }
+}
+.fb-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+/* ================================
+   🔥 Sección multimedia (Index)
+   ================================ */
+.media-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap; /* se adapta en pantallas pequeñas */
+}
+
+.youtube-container,
+.facebook-container {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.youtube-container:hover,
+.facebook-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 150, 0, 0.7);
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #eee;
+  text-shadow: 0 0 10px #000;
+}
+
+/* ======================================================
+   💀 ESTILO INFERNAL MODERNO PARA INDEX
+   ====================================================== */
+
+.video-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35);
+}
+
+/* 🔥 Hero principal */
+.hero {
+  text-align: center;
+  color: #f2e8d5;
+  padding: 4rem 1rem;
+  min-height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.infernal-title {
+  font-family: 'Cinzel', serif;
+  color: #ffcc00;
+  text-shadow: 0 0 20px #b30000, 0 0 40px #ff6600;
+  margin-bottom: 2rem;
+  animation: flameFlicker 2.5s infinite alternate;
+}
+
+/* 🩸 Marco infernal para Facebook y YouTube */
+.media-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.flame-border {
+  border: 3px solid #660000;
+  border-radius: 12px;
+  background: rgba(10, 0, 0, 0.65);
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  animation: infernalGlow 3s infinite alternate;
+}
+
+.media-frame {
+  margin: 1rem auto;
+  padding: 10px;
+  background: rgba(40, 0, 0, 0.4);
+  border-radius: 10px;
+  box-shadow: inset 0 0 20px rgba(255, 50, 0, 0.6);
+}
+
+/* 📜 Texto descriptivo */
+.welcome-text {
+  color: #ddd;
+  text-shadow: 0 0 15px #000;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+/* ✨ Efectos */
+@keyframes flameFlicker {
+  0% { text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300; }
+  50% { text-shadow: 0 0 20px #ff3300, 0 0 40px #ff0000; }
+  100% { text-shadow: 0 0 10px #ff6600, 0 0 25px #ff9900; }
+}
+
+@keyframes infernalGlow {
+  0% { box-shadow: 0 0 20px rgba(255, 0, 0, 0.4); }
+  100% { box-shadow: 0 0 45px rgba(255, 50, 0, 0.8); }
+}
+

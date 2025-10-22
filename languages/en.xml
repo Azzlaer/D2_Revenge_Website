@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language>
+  <!-- ============================================= -->
+  <!-- 🏠 MAIN MENU -->
+  <!-- ============================================= -->
+  <menu>
+    <home>Home</home>
+    <about>About</about>
+    <downloads>Downloads</downloads>
+	<donations>Donations</donations>
+	<tools>Tools</tools>
+	<pvp>PvP Rules</pvp>
+	<serverrules>Server Rules</serverrules>
+
+  </menu>
+
+  <!-- ============================================= -->
+  <!-- ⚔️ MAIN CONTENT (INDEX) -->
+  <!-- ============================================= -->
+  <content>
+    <welcome>🔥 Welcome to Diablo II: Revenge 🔥</welcome>
+    <description>
+      Step once more into the inferno with the ultimate expansion of Diablo II: Lord of Destruction.  
+      Experience a darker world filled with deadly enemies, rebalanced heroes, and an active community.  
+      Awaken your inner warrior and face the Lords of Hell in their most powerful form!
+    </description>
+  </content>
+
+  <!-- ============================================= -->
+  <!-- 👹 ABOUT SECTION -->
+  <!-- ============================================= -->
+  <about>
+    <title>New Season - Diablo II: Revenge</title>
+    <description>
+      🔥 Welcome to the new season of Diablo II: Revenge! 🔥  
+      24 years later, the legendary game that stole your sleepless nights returns—completely reborn:  
+      new areas, unique items, rebalanced characters, expanded stash, and an active community await you.  
+      Download the full game **for free** with our auto-updating launcher and custom map.  
+      A darker, deadlier, and improved experience awaits.  
+      Are you ready to return to the flames?
+    </description>
+
+    <notes_title>Server Notes</notes_title>
+    <multi_host>MultiHost available in 🇦🇷 🇺🇸 🇪🇺</multi_host>
+    <drop_exp>Increased drop rate and experience gain</drop_exp>
+    <terror_zones>Modified Terror Zones</terror_zones>
+    <events>Weekend events every week</events>
+    <tournaments>Competitive clan tournaments</tournaments>
+    <spells>Custom Sunder spells</spells>
+    <runewords>Modified D2R Runewords</runewords>
+    <corrupted_items>Enhanced corrupted items</corrupted_items>
+    <balance>Balanced PvP / PvM skills</balance>
+    <pvp>Active PvP Arena</pvp>
+    <autopick>AutoPick for gold and gems</autopick>
+    <charmzone>CharmZone system</charmzone>
+    <stash>Modified stash</stash>
+  </about>
+
+  <!-- ============================================= -->
+  <!-- 💾 DOWNLOADS SECTION -->
+  <!-- ============================================= -->
+  <downloads>
+    <title>Downloads Section</title>
+    <intro>
+      💀🔥 Download the official **Diablo II: Revenge** files 🔥💀  
+      Here you can find the full game client, the auto-updating launcher, and useful tools.  
+      All links are secure and verified by our development team.  
+      Prepare yourself to descend once more into the burning darkness!
+    </intro>
+
+    <table>
+      <name>File Name</name>
+      <description>Description</description>
+      <link>Link</link>
+      <download>Download</download>
+    </table>
+
+    <items>
+      <file>
+        <name>👹 Full Game Client</name>
+        <desc>Official Diablo II: Revenge client (latest stable version).</desc>
+        <url>https://drive.google.com/file/d/1259AylwJNwDHjsjJ_YMYFQ9N5yyNs0dQ</url>
+      </file>
+    </items>
+  </downloads>
+
+  <!-- ============================================= -->
+  <!-- ⚙️ COMING SOON (OPTIONAL) -->
+  <!-- ============================================= -->
+  <comingsoon>
+    <title>Coming Soon...</title>
+    <text>🕯️ New features and special events for the community are on their way.  
+    Stay tuned for infernal updates straight from the depths of Sanctuary.</text>
+  </comingsoon>
+  
+  <donations>
+  <title>Donations</title>
+  <intro>
+    To keep our server alive, we rely on the support of players like you.  
+    If you're interested in contributing, we offer several options as a token of our gratitude.  
+    Contact us via WhatsApp if you wish to donate — your support is essential and deeply appreciated.
+  </intro>
+
+  <items>
+    <rename>Character name change.</rename>
+    <characters>Level 70–80 characters.</characters>
+    <spells>Sunder spells.</spells>
+    <runes>Recover RW runes.</runes>
+    <tickets>New Map Tickets.</tickets>
+    <craft>Craft Pack: Stack Rune + Gem + Jewel.</craft>
+    <keys>Uber Key Pack.</keys>
+  </items>
+
+  <contact_text>Contact our administrators directly:</contact_text>
+  <contact_link>https://api.whatsapp.com/send?phone=51916027900</contact_link>
+</donations>
+
+
+
+<tools>
+  <title>Useful Tools</title>
+  <intro>
+    Here you will find essential tools to enhance your Diablo II: Revenge experience.  
+    Calculators, frame tables, and infernal resources to optimize your builds.  
+    ⚔️ Prepare to master every strike and spell!
+  </intro>
+
+  <table>
+    <name>Tool Name</name>
+    <link>Link</link>
+  </table>
+
+  <items>
+    <tool>
+      <name>⚔️ Diablo 2 Attack Speed Calculator</name>
+      <url>https://d2.lc/IAS/</url>
+    </tool>
+    <tool>
+      <name>📜 Diablo II Frame / Breakpoint Tables Archive</name>
+      <url>https://d2.lc/BP/</url>
+    </tool>
+  </items>
+</tools>
+
+
+<rules>
+  <title>Official PvP Rules</title>
+  <intro>
+    These are the official PvP rules used in the 1v1 Multiclass Tournaments, and they should also be taken as a reference for public duels.
+  </intro>
+
+  <multiclass>
+    <title>Multiclass 1 v 1 Rules</title>
+    <text>
+    -Arena: Blood Swamp.
+    -PvP Plugin: Potions, inventory access, and town portals are disabled.
+    -The map automatically caps maximum resistances to 80% for characters and summons.
+    </text>
+  </multiclass>
+
+  <general>
+    <title>General Rules</title>
+    <text>
+    -Level 1 Teleport is forbidden.
+    -Mercenaries are not allowed.
+    -Item charges are forbidden.
+    -Open Wounds: 50%.
+    -Slow Target: 25%.
+    -Banned Unique: WidowMaker.
+    -Banned RW: OAK, Doom, Ice, Infinity.
+    -Teleport from Bramble or Thorn is forbidden.
+    </text>
+  </general>
+
+  <corruption>
+    <title>Corruption Rules</title>
+    <text>
+    -Viper with Teleport corruption is forbidden (except for Sorceress).
+    -Magic Spike with Cast corruption is forbidden.
+    -Spectral Shard with Cast corruption is forbidden.
+    -Suicide Branch with Cast corruption is forbidden.
+    -Only one corrupted ring with class skill is allowed (the second must be elemental).
+
+    Absorption:
+    -Fire: 15%
+    -Cold: 20% + Nightwing’s Veil
+    -Lightning: 17%
+    -Poison: 50% reduction
+    </text>
+  </corruption>
+
+  <classes>
+    <title>Class Rules</title>
+    <text>
+    SORCERESS 🧙‍♀️  
+    -RP: 12  
+    -Mana Shield forbidden  
+    -Combustion forbidden  
+
+    PALADIN 🛡️  
+    -Forbidden Auras: Prayer, Meditation, Cleansing, Holy Freeze, Vigor, and Resistance Auras  
+    -Holy Bolt forbidden  
+    -Hammerdins: Max DR 18  
+    -Smiths: Vigor allowed  
+
+    BARBARIAN 💪  
+    -RP: 35  
+    -OW: 75  
+    -All Shouts allowed  
+
+    NECROMANCER 💀  
+    -RP with Teleport: 0  
+    -RP without Teleport: 27  
+    -Bone Prison forbidden  
+    -Only Curse allowed: Lower Resist  
+    -Only Clay Golem allowed  
+
+    ASSASSIN 🗡️  
+    -RP with Teleport: 0  
+    -RP without Teleport: 27  
+    -Open Wounds: 95%  
+
+    DRUID 🐺  
+    -Rabies Druids may use Bramble Teleport (except in Melee tournaments)  
+    -RP with Teleport: 0  
+    -RP without Teleport: 35  
+    -Summons allowed: 1 Spirit and 1 Bear  
+    -Elemental Shield: 0% Absorption  
+
+    AMAZON 🏹  
+    -Repost: 27  
+    -Slow Missiles forbidden  
+    -Decoy and Valkyrie allowed
+    </text>
+  </classes>
+</rules>
+
+<serverrules>
+  <title>Server Rules</title>
+  <intro>
+    Failure to comply with these rules will result in appropriate sanctions by the Administrator or Operator in charge.
+    The rules, beginning with the mother of all rules — COMMON SENSE — are as follows:
+  </intro>
+  <text>
+  ⚔️ The use of BOTS (programs that play for the user) is STRICTLY FORBIDDEN. Punishment: PERMANENT BAN for the account detected and ALL RELATED ACCOUNTS.
+
+  💀 It is strictly forbidden to use the command /dnd while mephing or pindle-running. Why? To avoid issues in case of bot-related sanctions.
+
+  🗡️ It is forbidden to insult, discriminate or provoke other players in any way (religion, race, etc.). Misconduct or harassment will result in penalties.
+
+  🔊 CAPS LOCK (writing in all caps) and FLOODING (repetition of words or phrases) are forbidden. Sanctions will be determined by the Admin or Operator.
+
+  🕸️ Account theft is considered the WORST offense. If committed by a clan member, all accounts within that clan may be permanently banned (including IP ranges).
+
+  🚫 SPAM or advertising of other servers, communities or forums is NOT allowed. Violation results in a permanent ban.
+
+  🔞 Sharing external websites is FORBIDDEN, especially those with adult or violent content. The server is not responsible for third-party links.
+
+  👿 Creating accounts similar to Admin/Op names with malicious intent will be sanctioned according to severity.
+
+  ⚔️ PK (Player Kill) in Softcore is allowed only in “PK Duel” games.
+  💀 PK in Hardcore is STRICTLY FORBIDDEN.
+
+  💰 Items dropped in public games belong to whoever picks them up. The same applies to gold — it is not penalized but morally discouraged.
+
+  🔥 “Forge Rush” agreements between players are private deals. The Staff will NOT intervene.
+
+  🔐 Staff will NOT change passwords except in verified theft cases. Users are responsible for their own password security.
+
+  💸 Selling items, runes, or accounts for real money is FORBIDDEN. Both buyer and seller will be permanently locked.
+
+  🧙‍♂️ Staff members NEVER need your password. Never share it with anyone. Any losses will be your responsibility.
+
+  ⚰️ Any infraction committed by a clan member may result in sanctions for the entire clan.
+
+  🔥 D2 Revenge reserves the right of admission and permanence.
+  </text>
+  <warning>Rules may be updated periodically. Stay alert to official announcements. Regards.</warning>
+  
+  <!-- 💀 SANCTIONS TABLE -->
+  <sanctions>
+    <title>Sanctions Table</title>
+    <infraction>Infraction</infraction>
+    <penalty>Penalty</penalty>
+
+    <bot>Bot Usage</bot>
+    <bot_penalty>Permanent Ban</bot_penalty>
+
+    <insult>Harassment / Discrimination</insult>
+    <insult_penalty>Warning or Temporary Ban</insult_penalty>
+
+    <spam>Spam / Advertising</spam>
+    <spam_penalty>Permanent Ban</spam_penalty>
+
+    <account_theft>Account Theft</account_theft>
+    <account_theft_penalty>Permanent Ban + IP Lock</account_theft_penalty>
+
+    <real_money>Real Money Trading</real_money>
+    <real_money_penalty>Account Lock (Buyer &amp; Seller)</real_money_penalty>
+
+    <fake_admin>Impersonating Admin/Op</fake_admin>
+    <fake_admin_penalty>Severe or Permanent Ban</fake_admin_penalty>
+  </sanctions>
+</serverrules>
+
+
+
+
+
+
+
+</language>
