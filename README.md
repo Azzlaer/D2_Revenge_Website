@@ -6,6 +6,9 @@ Este portal fue diseñado para ofrecer una experiencia visual inmersiva y sombr�
 
 ---
 
+![Preview](https://github.com/Azzlaer/D2_Revenge_Website/blob/main/01.png)
+![Preview](https://github.com/Azzlaer/D2_Revenge_Website/blob/main/02.png)
+
 ## 🕸️ Descripción del Proyecto
 
 **Diablo II: Revenge** es una plataforma web que sirve como punto de encuentro, información y soporte para la comunidad del servidor privado de *Diablo II*.
